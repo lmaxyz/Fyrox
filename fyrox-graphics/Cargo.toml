@@ -13,7 +13,9 @@ repository = "https://github.com/FyroxEngine/Fyrox"
 rust-version = "1.80"
 
 [dependencies]
-fyrox-core = { path = "../fyrox-core", version = "0.36.0", features = ["serde"] }
+fyrox-core = { path = "../fyrox-core", version = "0.36.0", features = [
+    "serde",
+] }
 glow = "0.16"
 serde = { version = "1", features = ["derive"] }
 strum = "0.26.1"
@@ -23,7 +25,7 @@ bytemuck = { version = "1.16.1", features = ["derive"] }
 fxhash = "0.2.1"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-glutin = "0.31"
+glutin = "0.32"
 glutin-winit = "0.4.2"
 raw-window-handle = "0.5.0"
 
